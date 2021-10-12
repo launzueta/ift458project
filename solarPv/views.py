@@ -12,3 +12,6 @@ def aboutUs(request):
 
 def comingSoon(request):
     return render(request, 'solarPv/comingSoon.html')
+
+def webPortal(request):
+    return render(request, 'solarPv/webPortal.html')
