@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lab 1 - Coming Soon</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="grid">
+        <div class="header"> 
+            <div class="head1">
+                <h1>
+                    solarPV
+                </h1>
+                <h2>
+                    Research & Development
+                </h2>
+            </div>
+            <div class="head2">
+                <img src="logo.png" alt="solarPV Logo">
+            </div>
+            <div class="head3">
+                <div>
+                    <a href="{% url 'solarPV-comingSoon'%}">Login</a> | 
+                    <a href="{% url 'solarPV-registration'%}">Register</a>
+                </div>
+                <!--ToDO: Make jQuery change this to logged in-->
+                <div>
+                    <h4>Welcome</h4>
+                    <!--Button Logout-->
+                </div>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="flatList">
+                <ul>
+                    <li><a href="{% url 'solarPV-home'%}">Homepage</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">Racks & Trackers</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">PV Module</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">PV Systems</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">Data Analytics</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">Cybersecurity</a></li>
+                </ul>
+            </div> 
+        </div>
+        {% block content %}{% endblock %}
+        <div class="footer"> 
+            <p>solarPV</p>
+            <p>Address, Phone, Email, Website @2019 All Rights Reserved</p>
+            <div class="flatList">
+                <ul>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">Site Map</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">Terms & Conditions</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">Privacy Policy</a></li>
+                    <li><a href="{% url 'solarPV-aboutUs'%}">About Us</a></li>
+                    <li><a href="{% url 'solarPV-comingSoon'%}">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="index.js"></script>
+  </body>
+</html>

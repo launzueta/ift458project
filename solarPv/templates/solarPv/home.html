@@ -1,119 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Lab 1 - Homepage</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="grid">
-        <div class="header"> 
-            <div class="head1">
-                <h1>
-                    <i>solarPV</i>
-                </h1>
-                <h2>
-                    Research & Development
-                </h2>
-            </div>
-            <div class="head2">
-                <img src="logo.png" alt="solarPV Logo">
-            </div>
-            <div class="head3">
-                <div>
-                    <a href="comingSoon.html">Login</a> | 
-                    <a href="registration.html">Register</a>
-                </div>
-                <!--ToDO: Make jQuery change this to logged in-->
-                <div>
-                    <h4>Welcome</h4>
-                    <!--Button Logout-->
-                </div>
-            </div>
-        </div>
-        <div class="nav">
-            <div class="flatList">
-                <ul>
-                    <li><a href="comingSoon.html">Racks & Trackers</a></li>
-                    <li><a href="comingSoon.html">PV Module</a></li>
-                    <li><a href="comingSoon.html">PV Systems</a></li>
-                    <li><a href="comingSoon.html">Data Analytics</a></li>
-                    <li><a href="comingSoon.html">Cybersecurity</a></li>
-                </ul>
-            </div> 
-        </div>
-        <div id="lMenu" class="leftSection"> 
-            <div id="hiddenLMenu">
-                <h3><a href="">PV Module</a></h3>
-                <ul>
-                    <li>Testing & Certification</li>
-                    <li>PV Rating</li>
-                </ul>
-                <br>
+{% extends "solarPV/base.html" %}
 
-                <h3><a href="">PV System and Performance</a></h3>
-                <ul>
-                    <li>Monitoring & Inspection</li>
-                    <li>Performance Analysis</li>
-                    <li>COmpare System</li>
-                    <li>Certification</li>
-                </ul>
-                <br>
+{% block content %}
+    <div id="lMenu" class="leftSection"> 
+        <div id="hiddenLMenu">
+            <h3><a href="">PV Module</a></h3>
+            <ul>
+                <li>Testing & Certification</li>
+                <li>PV Rating</li>
+            </ul>
+            <br>
 
-                <h3><a href="">Data Analytics</a></h3>
-                <ul>
-                    <li>Module lifetime prediction</li>
-                    <li>Energy Prediction</li>
-                </ul>
-                <br>
+            <h3><a href="">PV System and Performance</a></h3>
+            <ul>
+                <li>Monitoring & Inspection</li>
+                <li>Performance Analysis</li>
+                <li>COmpare System</li>
+                <li>Certification</li>
+            </ul>
+            <br>
 
-                <h3><a href="">Cybersecurity and Smart Grid Technologie</a>s</h3>
-                <ul>
-                </ul>
-                <br>
+            <h3><a href="">Data Analytics</a></h3>
+            <ul>
+                <li>Module lifetime prediction</li>
+                <li>Energy Prediction</li>
+            </ul>
+            <br>
 
-                <h3><a href="">Solar PV University</a></h3>
-                <ul>
-                </ul>
-                <br>
-            </div>
-        </div>
-        <div class="main"> 
-            <h2 style="font-style: italic">Feature contents</h2>
-        
-        </div>
-        <div id="rMenu" class="rightSection"> 
-            <div id="hiddenLMenu">
-                <h2>News & Events</h2>
+            <h3><a href="">Cybersecurity and Smart Grid Technologie</a>s</h3>
+            <ul>
+            </ul>
+            <br>
 
-                <a href="">PhotoVoltaic Technical Conference to take place in Marseille, France from 26 to 28 April 2017</a>
-                <br><br>
-
-                <a href="">Trump is next US president! What this means for climate change</a>
-                <br><br>
-
-                <a href="">Syrian forces recapture Aleppo</a>
-                <br><br>
-
-                <a href="">Senate votes on SCOTUS nominee</a>
-                <br><br>
-            </div>
-        </div>
-        <div class="footer"> 
-            <p>solarPV</p>
-            <p>Address, Phone, Email, Website @2019 All Rights Reserved</p>
-            <div class="flatList">
-                <ul>
-                    <li><a href="comingSoon.html">Site Map</a></li>
-                    <li><a href="comingSoon.html">Terms & Conditions</a></li>
-                    <li><a href="comingSoon.html">Privacy Policy</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="comingSoon.html">Contact Us</a></li>
-                </ul>
-            </div>
+            <h3><a href="">Solar PV University</a></h3>
+            <ul>
+            </ul>
+            <br>
         </div>
     </div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js">
-    </script>
-    <script src="scripts.js"></script>
-  </body>
-</html>
+    <div class="main"> 
+        <h2 style="font-style: italic">Feature contents</h2>
+
+    </div>
+    <div id="rMenu" class="rightSection"> 
+        <div id="hiddenLMenu">
+            <h2>News & Events</h2>
+
+            <a href="">PhotoVoltaic Technical Conference to take place in Marseille, France from 26 to 28 April 2017</a>
+            <br><br>
+
+            <a href="">Trump is next US president! What this means for climate change</a>
+            <br><br>
+
+            <a href="">Syrian forces recapture Aleppo</a>
+            <br><br>
+
+            <a href="">Senate votes on SCOTUS nominee</a>
+            <br><br>
+        </div>
+    </div>
+{% endblock content%}
