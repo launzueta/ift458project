@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.apps import apps
+from backend.models import Client, Certificate
 
 
 def home(request):
@@ -24,8 +23,12 @@ def webPortal(request):
 
 
 def testAndCert(request):
-    clientModel = apps.get_model('backend', 'Client')
-    context = {
-        'client': clientModel.objects.all()
-    }
-    return render(request, 'solarPv/testAndCert.html', context)
+    if request.method == 'POST':
+        search_word = request.POST.get("key", "")
+        if search_word == "ALL":
+            certificate_list = Certificate.objects.all()
+        else:
+            certificate_list = Certificate.objects.filter(clientID=search_word)
+    else:
+        certificate_list = Certificate.objects.all()
+    return render(request, 'solarPv/testAndCert.html', {'certificate_list': certificate_list})

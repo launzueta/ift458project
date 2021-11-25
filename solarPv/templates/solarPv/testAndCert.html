@@ -3,19 +3,29 @@
 {% block content %}
     <div class="main"> 
         <h2>Testing & Certification Search Dashboard</h2>
-        <form id="registrationForm" class="registrationForm">
-            <label>Certificate: </label><input type="text" required><br>
-            <input onclick="" type="submit" value="Submit">
+        <p> Enter ALL to display all certificates </p>
+        <form method="POST">
+            {% csrf_token %}
+            <label>Certificate: </label><input type="text" name="key"><br>
+            <button type="submit">Search</button>
         </form>
-<!--        <table>-->
-<!--            {% for client in Clients %}-->
-<!--                <tr>-->
-<!--                    -->
-<!--                </tr>-->
-<!--            {% endfor %}-->
-<!--        </table>-->
-        <div>
-            {Client}
-        </div>
+        </br>
+        </br>
+        <table>
+            <tr>
+                <th>Certificate Number</th>
+                <th>User ID</th>
+                <th>Client ID</th>
+                <th>Report Number</th>
+            </tr>
+            {% for certificate in certificate_list %}
+                <tr>
+                    <td>{{ certificate.certificateNumber }}</td>
+                    <td>{{ certificate.userID }}</td>
+                    <td>{{ certificate.clientID }}</td>
+                    <td>{{ certificate.reportNumber }}</td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
 {% endblock content%}

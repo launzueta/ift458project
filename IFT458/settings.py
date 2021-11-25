@@ -70,6 +70,8 @@ TEMPLATES = [
     },
 ]
 
+AUTH_USER_MODEL = 'backend.SPVUser'
+
 WSGI_APPLICATION = 'IFT458.wsgi.application'
 
 
@@ -130,4 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly']
 }
+
+LOGIN_REDIRECT_URL = 'solarPV-home'
+
 

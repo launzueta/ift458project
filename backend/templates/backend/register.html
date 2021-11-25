@@ -1,0 +1,16 @@
+{% extends "solarPV/base.html" %}
+
+{% block content %}
+    <div class="main">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Register Here</legend>
+                {{ form.as_p }}
+            </fieldset>
+            <div>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
